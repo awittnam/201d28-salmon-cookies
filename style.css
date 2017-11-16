@@ -1,6 +1,17 @@
+{
+  position: static;
+  display: block;
+  font-size: 2vw;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: grey;
+  background-color: burlywood;
 }
 
 table {
@@ -15,4 +26,8 @@ table, td {
 
 <.form {
 
+}
+
+header, footer {
+  width: 100%
 }
