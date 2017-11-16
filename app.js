@@ -34,20 +34,6 @@ Store.prototype.cookieSales = function() {
 
 stores[0].cookieSales();
 
-// Store.prototype.cookiesPerHour = function() {
-//   for(var i = 0; i < 15; i++) {
-//     var cookieSales = this.cookieSales();
-//     var newLi = document.createElement('li');
-//     var newContent = document.createTextNode(cookieSales + ' cookies');
-//     newLi.appendChild(newContent);
-//     var current = document.getElementById('li1');
-//     document.body.insertBefore(newLi, current);
-//   }
-// };
-
-// for(var i = 0; i < 5; i++)
-//   stores[i].cookiesPerHour();
-
 
 Store.tableHours = function(){
   var tblEl = document.getElementById('main-tbl');
@@ -67,6 +53,8 @@ Store.tableHours = function(){
   }
 };
 Store.tableHours();
+
+j = 0;
 
 Store.prototype.cookiesPerHour = function(){
   var totalDay = 0;
@@ -95,237 +83,18 @@ Store.prototype.cookiesPerHour = function(){
 for(var j = 0; j < 5; j++){
   stores[j].cookiesPerHour();
 }
+var formEl = document.getElementById('main-form');
 
-
-// Store.prototype.cookiesPerHour = function() {
-//   for(var i = 0; i < 15; i++) {
-//     if (i < 15){
-//       var cookieSales = this.cookieSales();
-//       this.totalDay += cookieSales;
-//       //this.saleResults(cookieSales);
-//       var newLi = document.createElement('li');
-//       var newContent = document.createTextNode(this.hours[i] + ': ' + cookieSales + ' cookies');
-//       newLi.appendChild(newContent);
-//       var current = document.getElementById('li1');
-//       document.body.insertBefore(newLi, current);
-//     } else {
-//       var newLiZ = document.createElement('li');
-//       var newContentZ = document.createTextNode('Total: ' + this.totalDay);
-//       newLiZ.appendChild(newContentZ);
-//       var currentZ = document.getElementById('li1');
-//       document.body.insertBefore(newLiZ, currentZ);
-//       break;
-//     }
-//   }
-// };
-//
-// stores[0].cookiesPerHour();
-//  custPerHr: function() {
-//     return Math.random() * (this.max - this.min) + this.min;
-
-// Do not use this syntax for creating instance methods
-
-
-// Person.sayAge = function() {
-//   console.log('Constructor this', this);
-// };
-
-
-
-// Create all of your prototype methods
-
-// Iterate through your methods to populate all of your dynamic store data
-
-// Iterate through your list of Stores to render each to the DOM
-// Don't forget to create you tables!! ;-)
-// var firstAndPike = {
-//   min : 23,
-//   max : 65,
-//   avgSale : 6.3,
-//   saleResults: [],
-//   totalDay:0,
-//   hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
-//   custPerHr: function() {
-//     return Math.random() * (this.max - this.min) + this.min;
-//   },
-//   cookieSales: function() {
-//     return Math.round(this.custPerHr() * this.avgSale);
-//   },
-//   cookiesPerHour: function() {
-//     for(var i = 0; i < 16; i++) {
-//       if (i < 15){
-//         var cookieSales = this.cookieSales();
-//         this.totalDay += cookieSales;
-//         this.saleResults.push(cookieSales);
-//         var newLi = document.createElement('li');
-//         var newContent = document.createTextNode(this.hours[i] + ': ' + cookieSales + ' cookies');
-//         newLi.appendChild(newContent);
-//         var current = document.getElementById('li1');
-//         document.body.insertBefore(newLi, current);
-//       } else {
-//         var newLiZ = document.createElement('li');
-//         var newContentZ = document.createTextNode('Total: ' + this.totalDay);
-//         newLiZ.appendChild(newContentZ);
-//         var currentZ = document.getElementById('li1');
-//         document.body.insertBefore(newLiZ, currentZ);
-//         break;
-//       }
-//     }
-//   },
-// };
-// console.log(firstAndPike);
-// firstAndPike.cookiesPerHour ();
-//
-//
-//
-// var seaTac = {
-//   min: 3,
-//   max: 24,
-//   avgSale: 1.2,
-//   saleResults: [],
-//   totalDay:0,
-//   hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
-//   custPerHr: function() {
-//     return Math.random() * (this.max - this.min) + this.min;
-//   },
-//   cookieSales: function() {
-//     return Math.round(this.custPerHr() * this.avgSale);
-//   },
-//   cookiesPerHour: function() {
-//     for(var i = 0; i < 16; i++) {
-//       if (i < 15){
-//         var cookieSales = this.cookieSales();
-//         this.totalDay += cookieSales;
-//         this.saleResults.push(cookieSales);
-//         var newLi = document.createElement('li');
-//         var newContent = document.createTextNode(this.hours[i] + ': ' + cookieSales + ' cookies');
-//         newLi.appendChild(newContent);
-//         var current = document.getElementById('li2');
-//         document.body.insertBefore(newLi, current);
-//       } else {
-//         var newLiZ = document.createElement('li');
-//         var newContentZ = document.createTextNode('Total: ' + this.totalDay);
-//         newLiZ.appendChild(newContentZ);
-//         var currentZ = document.getElementById('li2');
-//         document.body.insertBefore(newLiZ, currentZ);
-//         break;
-//       }
-//     }
-//   },
-// };
-// console.log(seaTac);
-// seaTac.cookiesPerHour ();
-//
-// var seattleCenter = {
-//   min: 11,
-//   max: 38,
-//   avgSale: 3.7,
-//   saleResults: [],
-//   totalDay:0,
-//   hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
-//   custPerHr: function() {
-//     return Math.random() * (this.max - this.min) + this.min;
-//   },
-//   cookieSales: function() {
-//     return Math.round(this.custPerHr() * this.avgSale);
-//   },
-//   cookiesPerHour: function() {
-//     for(var i = 0; i < 16; i++) {
-//       if (i < 15){
-//         var cookieSales = this.cookieSales();
-//         this.totalDay += cookieSales;
-//         this.saleResults.push(cookieSales);
-//         var newLi = document.createElement('li');
-//         var newContent = document.createTextNode(this.hours[i] + ': ' + cookieSales + ' cookies');
-//         newLi.appendChild(newContent);
-//         var current = document.getElementById('li3');
-//         document.body.insertBefore(newLi, current);
-//       } else {
-//         var newLiZ = document.createElement('li');
-//         var newContentZ = document.createTextNode('Total: ' + this.totalDay);
-//         newLiZ.appendChild(newContentZ);
-//         var currentZ = document.getElementById('li3');
-//         document.body.insertBefore(newLiZ, currentZ);
-//         break;
-//       }
-//     }
-//   },
-// };
-// console.log(seattleCenter);
-// seattleCenter.cookiesPerHour ();
-//
-// var capitolHill = {
-//   min : 20,
-//   max : 38,
-//   avgSale : 2.3,
-//   saleResults: [],
-//   totalDay:0,
-//   hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
-//   custPerHr: function() {
-//     return Math.random() * (this.max - this.min) + this.min;
-//   },
-//   cookieSales: function() {
-//     return Math.round(this.custPerHr() * this.avgSale);
-//   },
-//   cookiesPerHour: function() {
-//     for(var i = 0; i < 16; i++) {
-//       if (i < 15){
-//         var cookieSales = this.cookieSales();
-//         this.totalDay += cookieSales;
-//         this.saleResults.push(cookieSales);
-//         var newLi = document.createElement('li');
-//         var newContent = document.createTextNode(this.hours[i] + ': ' + cookieSales + ' cookies');
-//         newLi.appendChild(newContent);
-//         var current = document.getElementById('li4');
-//         document.body.insertBefore(newLi, current);
-//       } else {
-//         var newLiZ = document.createElement('li');
-//         var newContentZ = document.createTextNode('Total: ' + this.totalDay);
-//         newLiZ.appendChild(newContentZ);
-//         var currentZ = document.getElementById('li4');
-//         document.body.insertBefore(newLiZ, currentZ);
-//         break;
-//       }
-//     }
-//   },
-// };
-// console.log(capitolHill);
-// capitolHill.cookiesPerHour ();
-//
-// var alki = {
-//   min: 2,
-//   max: 16,
-//   avgSale: 4.6,
-//   saleResults: [],
-//   totalDay:0,
-//   hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
-//   custPerHr: function() {
-//     return Math.random() * (this.max - this.min) + this.min;
-//   },
-//   cookieSales: function() {
-//     return Math.round(this.custPerHr() * this.min);
-//   },
-//   cookiesPerHour: function() {
-//     for(var i = 0; i < 16; i++) {
-//       if (i < 15){
-//         var cookieSales = this.cookieSales();
-//         this.totalDay += cookieSales;
-//         this.saleResults.push(cookieSales);
-//         var newLi = document.createElement('li');
-//         var newContent = document.createTextNode(this.hours[i] + ': ' + cookieSales + ' cookies');
-//         newLi.appendChild(newContent);
-//         var current = document.getElementById('li5');
-//         document.body.insertBefore(newLi, current);
-//       } else {
-//         var newLiZ = document.createElement('li');
-//         var newContentZ = document.createTextNode('Total: ' + this.totalDay);
-//         newLiZ.appendChild(newContentZ);
-//         var currentZ = document.getElementById('li5');
-//         document.body.insertBefore(newLiZ, currentZ);
-//         break;
-//       }
-//     }
-//   },
-// };
-// console.log(alki);
-// alki.cookiesPerHour ();
+function onSubmit(event) {
+  event.preventDefault();
+  var myFormData = {
+    name: event.target.name.value,
+    min: parseInt(event.target.min.value),
+    max: parseInt(event.target.max.value),
+    avg: parseInt(event.target.avg.value),
+  };
+  new Store(myFormData.name, myFormData.min, myFormData.max, myFormData.avg);
+  stores[j].cookiesPerHour();
+  j++;
+}
+formEl.addEventListener('submit', onSubmit);
