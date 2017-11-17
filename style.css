@@ -91,3 +91,19 @@ main {
 #two-column-pic {
   max-width: 300px;
 }
+
+.two-column-merch {
+  display: inline-block;
+  width: calc(100% / 3);
+  margin: 5% 0;
+  margin-left: calc((100% / 3) /3);
+}
+
+#merch-pic {
+  max-width: 300px;
+  }
+
+.section-title {
+  text-align: center;
+  font-size: 4vw;
+}
