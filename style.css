@@ -9,7 +9,35 @@
   font-family: helvetica;
   box-sizing: border-box;
 }
+.topnav {
+ overflow: hidden;
+ background-color: #F8F8FF ;
+ position: fixed;
+ background-position: center;
+ top: 0%;
+ width: 100%;
+ right: .1%;
+ opacity: 0.55;
+ z-index: 5;
+}
 
+.topnav a {
+ float: left;
+ display: block;
+ color: salmon;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+ font-family: 'Open Sans', sans-serif;
+ letter-spacing: 5px;
+ font-weight: bold;
+}
+
+.topnav a:hover {
+ background-color: #ddd;
+ color: black;
+}
 body {
   background-color: burlywood;
 }
@@ -30,7 +58,7 @@ table, td {
 
 header, footer {
   width: 100%;
-  height: 10%;
+  height: 15%;
   text-align: center;
 }
 /*.pat {
