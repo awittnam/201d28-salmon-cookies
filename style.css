@@ -55,3 +55,11 @@ main {
   margin: 5% 0;
   margin-left: calc((100% / 4) /4);
 }
+
+#three-column-pic {
+  max-width: 200px;
+}
+
+#two-column-pic {
+  max-width: 300px;
+}
